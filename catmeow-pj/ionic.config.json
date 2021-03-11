@@ -1,0 +1,7 @@
+{
+  "name": "catmeow-pj",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,313 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-item lines="none">
+      <ion-avatar slot="end">
+        <img src="assets/icon/cat.png">
+      </ion-avatar>
+      <ion-label>
+
+        <h2>Introducing Cat</h2>
+        <p>This Name</p>
+
+      </ion-label>
+    </ion-item>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <div class="ion-padding wrapper">
+    <ion-searchbar></ion-searchbar>
+    <ion-grid class="ion-no-padding">
+      <ion-row class="ion-align-items-baseline">
+        <ion-col size="6">
+          <h4 class="title">
+            <h5> <b>Popular Cats</b></h5>
+          </h4>
+        </ion-col>
+        <ion-col size="6">
+          <h4 class="more ion-text-end">
+            <ion-button size="small" href="view-more">View more</ion-button>
+          </h4>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <ion-grid class="ion-no-padding">
+    <ion-row>
+      <ion-col size="12">
+        <ion-slides [options]="options">
+          <ion-slide *ngFor="let item of this.listCat" (click)="feed(item)">
+            <ion-card class="card">
+              <ion-card-content class="ion-text-left">
+                <div class="img-wrapper">
+                  <ion-img src="{{item.image}}"></ion-img>
+                </div>
+
+                <ion-card-title class="title" style="color: #000;">Name : {{item.catname}}</ion-card-title>
+                <ion-card-subtitle>{{item.gene}}</ion-card-subtitle>
+                <ion-card-subtitle>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                </ion-card-subtitle>
+              </ion-card-content>
+            </ion-card>
+          </ion-slide>
+
+          <ion-slide>
+            <ion-card class="card">
+              <ion-card-content class="ion-text-left">
+                <div class="img-wrapper">
+                  <ion-img src="assets/images/maine-coon.jpg"></ion-img>
+                </div>
+                <ion-card-title class="title">Name : Lala</ion-card-title>
+                <ion-card-subtitle>Maine Coon(เมนคูน)</ion-card-subtitle>
+                <ion-card-subtitle>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-half"></ion-icon>
+                </ion-card-subtitle>
+              </ion-card-content>
+            </ion-card>
+          </ion-slide>
+
+          <ion-slide>
+            <ion-card class="card">
+              <ion-card-content class="ion-text-left">
+
+                <div class="img-wrapper">
+                  <ion-img src="assets/images/Sphinx.jpg"></ion-img>
+                </div>
+
+                <ion-card-title class="title">Name : Fino</ion-card-title>
+                <ion-card-subtitle>Sphinx (สฟิงซ์)</ion-card-subtitle>
+                <ion-card-subtitle>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                </ion-card-subtitle>
+              </ion-card-content>
+            </ion-card>
+          </ion-slide>
+
+          <ion-slide>
+            <ion-card class="card">
+              <ion-card-content class="ion-text-left">
+
+                <div class="img-wrapper">
+                  <ion-img src="assets/images/Ragdoll.jpg"></ion-img>
+                </div>
+
+                <ion-card-title class="title">Name : Lala</ion-card-title>
+                <ion-card-subtitle>Ragdoll (แร็กดอลล์)</ion-card-subtitle>
+                <ion-card-subtitle>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                </ion-card-subtitle>
+              </ion-card-content>
+            </ion-card>
+          </ion-slide>
+
+        </ion-slides>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="ion-padding-horizontal wrapper">
+
+    <ion-grid class="ion-no-padding">
+      <ion-row class="ion-align-items-baseline">
+        <ion-col size="6">
+          <h4 class="title">
+            Explore Categories Food
+          </h4>
+        </ion-col>
+        <ion-col size="6">
+          <h4 class="more ion-text-end">
+            Show more
+          </h4>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </div>
+
+  <ion-grid class="ion-no-padding">
+    <ion-row>
+      <ion-col size="12">
+        <ion-slides [options]="categories">
+
+          <ion-slide>
+            <ion-card class="category" color="success">
+              <ion-card-header class="ion-text-center">
+                <ion-img src="assets/Cat-Food/food5.png" routerLink="/cat-food"></ion-img>
+                <ion-card-subtitle> 1 เดือน</ion-card-subtitle>
+              </ion-card-header>
+            </ion-card>
+          </ion-slide>
+
+          <ion-slide>
+            <ion-card class="category" color="primary">
+              <ion-card-header class="ion-text-center">
+                <ion-img src="assets/Cat-Food/food9.png" routerLink="/food"></ion-img>
+                <ion-card-subtitle>2-4 เดือน</ion-card-subtitle>
+              </ion-card-header>
+            </ion-card>
+          </ion-slide>
+
+          <ion-slide>
+            <ion-card class="category" color="warning">
+              <ion-card-header class="ion-text-center">
+                <ion-img src="assets/Cat-Food/food3.png" routerLink="/food"></ion-img>
+                <ion-card-subtitle>1 ปีเป็นต้นไป</ion-card-subtitle>
+              </ion-card-header>
+            </ion-card>
+          </ion-slide>
+        </ion-slides>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+
+  <div class="ion-padding-horizontal wrapper">
+
+    <ion-grid class="ion-no-padding">
+      <ion-row class="ion-align-items-baseline">
+        <ion-col size="6">
+          <h4 class="title">
+            All Cats
+          </h4>
+        </ion-col>
+        <ion-col size="6">
+          <h4 class="more ion-text-end">
+            Show more
+          </h4>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </div>
+
+  <ion-grid class="ion-no-padding">
+    <ion-row>
+      <ion-col size="12">
+        <ion-slides [options]="options">
+
+          <ion-slide>
+            <ion-card class="card">
+              <ion-card-content class="ion-text-left">
+
+                <div class="img-wrapper">
+                  <ion-img src="assets/images/scottish-fold.jpg"></ion-img>
+                </div>
+
+                <ion-card-title class="title">Name : Sumo</ion-card-title>
+                <ion-card-subtitle>Scottish Fold(สก็อตติชโฟลด์)</ion-card-subtitle>
+                <ion-card-subtitle>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                </ion-card-subtitle>
+              </ion-card-content>
+            </ion-card>
+          </ion-slide>
+
+          <ion-slide>
+            <ion-card class="card">
+              <ion-card-content class="ion-text-left">
+
+                <div class="img-wrapper">
+                  <ion-img src="assets/images/Turkish-Van.jpg"></ion-img>
+                </div>
+
+                <ion-card-title class="title">Name : Aibo</ion-card-title>
+                <ion-card-subtitle>Turkish Van (เตอร์กิชแวน)</ion-card-subtitle>
+                <ion-card-subtitle>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                </ion-card-subtitle>
+              </ion-card-content>
+            </ion-card>
+          </ion-slide>
+
+          <ion-slide>
+            <ion-card class="card">
+              <ion-card-content class="ion-text-left">
+
+                <div class="img-wrapper">
+                  <ion-img src="assets/images/american-shorthair.jpg"></ion-img>
+                </div>
+
+                <ion-card-title class="title">Name : SUGA</ion-card-title>
+                <ion-card-subtitle>American Shorthair (อเมริกันชอร์ตแฮร์)</ion-card-subtitle>
+                <ion-card-subtitle>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                </ion-card-subtitle>
+              </ion-card-content>
+            </ion-card>
+          </ion-slide>
+        </ion-slides>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <div class="ion-padding">
+    <ion-row>
+      <ion-col size="6">
+        <ion-badge color="light" class="ion-margin-end">
+        </ion-badge>
+      </ion-col>
+      <ion-col size="6" class="ion-text-end">
+        <ion-badge color="light">
+        </ion-badge>
+      </ion-col>
+    </ion-row>
+  </div>
+
+
+</ion-content>
+<ion-fab-button color="dark" (click)="presentAlertEditData()">
+  <ion-icon name="add-outline"></ion-icon>
+</ion-fab-button>

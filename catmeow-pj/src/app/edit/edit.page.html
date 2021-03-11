@@ -1,0 +1,152 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Edit CatMeow</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-header class="ion-no-border">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        &nbsp;<ion-button color="primary" class="backbtn" routerLink="/home" routerDirection="back">
+          <img src="{{this.image}}" />
+        </ion-button>
+      </ion-buttons>
+  
+      <ion-buttons slot="end">
+        <ion-button>
+          <ion-icon name="search-outline" color="dark"></ion-icon>
+        </ion-button>
+        <ion-button class="notification">
+          <ion-icon name="notifications-outline" color="dark"></ion-icon>
+          <span>&nbsp;</span>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <!-- <ion-slides pager="true" class="product-slider">
+      <ion-slide>
+        <img src="assets/images/maine-coon.jpg" />
+      </ion-slide>
+      <ion-slide>
+        <img src="assets/images/Sphinx.jpg" />
+      </ion-slide>
+      <ion-slide>
+        <img src="assets/images/Ragdoll.jpg" />
+      </ion-slide>
+    </ion-slides> -->
+  
+    <div class="ion-padding-vertical">
+      
+        <ion-item>
+          <h2><ion-input [(ngModel)]="this.catname">Name :</ion-input></h2>
+          
+        </ion-item>
+        <ion-item>
+          <ion-input [(ngModel)]="this.gene" >Gene :</ion-input>
+          
+        </ion-item>
+     
+      <ion-card-subtitle>
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star-outline"></ion-icon>
+      </ion-card-subtitle>
+    </div>
+  
+    <div class="seperator">
+      <hr>
+    </div>
+  
+   
+  
+    <div class="seperator">
+      <hr>
+    </div>
+  
+    <div class="description">
+      <h3>ข้อมเพิ่มเติม</h3>
+  
+ 
+        <ion-input >ลักษณะ :</ion-input>
+        <ion-input >อายุขัยเฉลี่ย :</ion-input>
+        <ion-input >น้ำหนัก:</ion-input>
+    
+        &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;<br>
+       
+    
+  
+    </div>
+  
+    <!-- <ion-button color="dark">
+      <ion-icon name="add-outline" routerLink="/add-edit"></ion-icon>
+    </ion-button> -->
+  
+    <div class="seperator">
+      <hr>
+    </div>
+  
+    <!-- <div class="variation">
+      <ion-segment (ionChange)="segmentChanged($event)" value="mousse">
+        <ion-segment-button value="mousse">
+          <ion-label>อาหารมูส</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="wet">
+          <ion-label>อาหารเปียก</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="grain">
+          <ion-label>อาหารเม็ด</ion-label>
+        </ion-segment-button>
+      </ion-segment>
+    </div> -->
+  
+    <!-- <div class="seperator">
+      <hr>
+    </div>
+  
+    <div class="variation-selector">
+      <div class="food-mousse" [class.active-variation]="activeVariation == 'mousse'">
+        <div [class.active]="selectedMousse == 1" (click)="changeMousse(1)">
+          <ion-img src="assets/Cat-Food/food5.png"></ion-img>
+        </div>
+      </div>
+      <div class="food-wet" [class.active-variation]="activeVariation == 'wet'">
+        <div [class.active]="selectedWet == 1" (click)="changeWet(1)">
+          <ion-img src="assets/Cat-Food/food9.png"></ion-img>
+        </div>
+      </div>
+  
+      <div class="food-grain" [class.active-variation]="activeVariation == 'grain'">
+        <div [class.active]="selectedGrain == 1" (click)="changeGrain(1)">
+          <ion-img src="assets/Cat-Food/food5.png"></ion-img>
+        </div>
+      </div>
+  
+    </div> -->
+    <div class="review">
+      <ion-row>
+        <ion-col size="6">
+          <div>
+            <!-- Food -->
+           
+             <ion-button (click)="edit()" >Save</ion-button>
+            <!-- <ion-button color="dark">
+              <ion-icon name="add-outline" href="add-edit">add</ion-icon>
+            </ion-button> -->
+          </div>
+        </ion-col>
+  
+        <!-- <ion-col>
+          <ion-button color="dark">
+            <ion-icon name="add-outline" routerLink="/add-edit"></ion-icon>
+          </ion-button> -->
+        <!-- </ion-col>  -->
+      </ion-row>
+    </div>
+    
+
+  </ion-content>
+</ion-content>

@@ -1,0 +1,138 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      &nbsp;<ion-button color="primary" class="backbtn" routerLink="/home" routerDirection="back">
+        <img src="../../assets/back-dark.svg" />
+      </ion-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="search-outline" color="dark"></ion-icon>
+      </ion-button>
+      <ion-button class="notification">
+        <ion-icon name="notifications-outline" color="dark"></ion-icon>
+        <span>&nbsp;</span>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-slides pager="true" class="product-slider">
+    <ion-slide>
+      <img src="{{this.image}}" />
+    </ion-slide>
+    <ion-slide>
+      <img src="assets/images/Sphinx.jpg" />
+    </ion-slide>
+    <ion-slide>
+      <img src="assets/images/Ragdoll.jpg" />
+    </ion-slide>
+  </ion-slides>
+
+  <div class="ion-padding-vertical">
+    <ion-label>
+      <h1 class="item-name">Name : {{this.catname}}</h1>
+      <p>{{this.gene}}</p>
+    </ion-label>
+    <ion-card-subtitle>
+      <ion-icon name="star"></ion-icon>
+      <ion-icon name="star"></ion-icon>
+      <ion-icon name="star"></ion-icon>
+      <ion-icon name="star"></ion-icon>
+      <ion-icon name="star-outline"></ion-icon>
+      
+    </ion-card-subtitle>
+  </div>
+  <ion-button (click)="Cat-Food">food</ion-button>
+  <div class="seperator">
+    <hr>
+  </div>
+
+  <div class="review">
+    <ion-row>
+      <ion-col size="6">
+        <div>
+          <!-- Food -->
+          <ion-button (click)="edit()">edit</ion-button>
+          <ion-button (click)="presentAlertDelete()">delete</ion-button>
+        
+          <!-- <ion-button color="dark">
+            <ion-icon name="add-outline" href="add-edit">add</ion-icon>
+          </ion-button> -->
+        </div>
+      </ion-col>
+
+      <!-- <ion-col>
+        <ion-button color="dark">
+          <ion-icon name="add-outline" routerLink="/add-edit"></ion-icon>
+        </ion-button> -->
+      <!-- </ion-col>  -->
+    </ion-row>
+  </div>
+
+  <div class="seperator">
+    <hr>
+  </div>
+
+  <div class="description">
+    <h5>ข้อมเพิ่มเติม</h5>
+
+    <p>
+      <b>ลักษณะ :</b> เป็นแมวที่มีขนาดกลางถึงขนาดใหญ่ มีกระดูกที่ใหญ่และแข็งแรง หัวและหน้ากลม หน้าผากโหนก แก้มเต็ม
+      ดวงตากลมโต และอยู่ในตำแหน่งที่ห่างกัน มีจมูกที่หัก <br>
+      <b>อายุขัยเฉลี่ย : </b> 14–15 ปี <br>
+      <b>น้ำหนัก : </b> เพศผู้จะมีน้ำหนัก 4-6 กิโลกรัม <br>
+      &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; เพศเมียจะมีน้ำหนัก 3-5 กิโลกรัม <br>
+      มีความยาวลำตัว 14 – 18 นิ้ว (ไม่รวมความยาวหาง)
+    </p>
+
+  </div>
+
+  <!-- <ion-button color="dark">
+    <ion-icon name="add-outline" routerLink="/add-edit"></ion-icon>
+  </ion-button> -->
+
+  <div class="seperator">
+    <hr>
+  </div>
+
+  <div class="variation">
+    <ion-segment (ionChange)="segmentChanged($event)" value="mousse">
+      <ion-segment-button value="mousse">
+        <ion-label>อาหารมูส</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="wet">
+        <ion-label>อาหารเปียก</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="grain">
+        <ion-label>อาหารเม็ด</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+
+  <div class="seperator">
+    <hr>
+  </div>
+
+  <div class="variation-selector">
+    <div class="food-mousse" [class.active-variation]="activeVariation == 'mousse'">
+      <div [class.active]="selectedMousse == 1" (click)="changeMousse(1)">
+        <ion-img src="assets/Cat-Food/food5.png"></ion-img>
+      </div>
+    </div>
+    <div class="food-wet" [class.active-variation]="activeVariation == 'wet'">
+      <div [class.active]="selectedWet == 1" (click)="changeWet(1)">
+        <ion-img src="assets/Cat-Food/food9.png"></ion-img>
+      </div>
+    </div>
+
+    <div class="food-grain" [class.active-variation]="activeVariation == 'grain'">
+      <div [class.active]="selectedGrain == 1" (click)="changeGrain(1)">
+        <ion-img src="assets/Cat-Food/food5.png"></ion-img>
+      </div>
+    </div>
+
+  </div>
+</ion-content>

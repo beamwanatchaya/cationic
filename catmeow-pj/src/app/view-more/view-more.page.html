@@ -1,0 +1,81 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      &nbsp;&nbsp;&nbsp;<ion-button color="primary" class="backbtn" routerLink="/home" routerDirection="back">
+        <img src="../../assets/back-dark.svg" />
+      </ion-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="search-outline" color="dark"></ion-icon>
+      </ion-button>
+      <ion-button class="notification">
+        <ion-icon name="notifications-outline" color="dark"></ion-icon>
+        <span>&nbsp;</span>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+<ion-searchbar></ion-searchbar> <br>
+
+  <div class="product-slider ion-padding-start">
+    <ion-slides [options]="{ slidesPerView: 'auto', zoom: false, grabCursor: true }">
+      <ion-slide>
+        <ion-col class="ion-text-left" routerDirection="forward">
+          <img src="assets/views/The Pixie1.png" />
+          <p>NAME : MOMO</p>
+          <h6>The Pixie-bob</h6>
+        </ion-col>
+      </ion-slide>
+
+      <ion-slide>
+        <ion-col class="ion-text-left"  routerDirection="forward">
+          <img src="assets/views/mainecoon.jpg" />
+          <p>Name : TARO</p>
+          <h6>Mainecoon</h6>
+        </ion-col>
+      </ion-slide>
+    </ion-slides>
+  </div>
+  <div class="product-slider ion-padding-start">
+    <ion-slides [options]="{ slidesPerView: 'auto', zoom: false, grabCursor: true }">
+      <ion-slide >
+        <ion-col class="ion-text-left"  routerDirection="forward">
+          <img src="assets/views/Turkish Van .jpg" />
+          <p>Name : Little </p>
+          <h6>Turkish Van</h6>
+        </ion-col>
+      </ion-slide>
+      <ion-slide>
+        <ion-col class="ion-text-left"  routerDirection="forward">
+          <img src="assets/views/Bengal.jpg" />
+          <p>NAME : FINA</p>
+          <h6>Bengal</h6>
+        </ion-col>
+      </ion-slide>
+    </ion-slides>
+  </div>
+  <div class="product-slider ion-padding-start">
+    <ion-slides [options]="{ slidesPerView: 'auto', zoom: false, grabCursor: true }">
+      <ion-slide >
+        <ion-col class="ion-text-left"  routerDirection="forward">
+          <img src="assets/views/AmerShorthair.jpg" />
+          <p>NAME : KENJI</p>
+          <h6>AmericanShort</h6>
+        </ion-col>
+      </ion-slide>
+      <ion-slide>
+        <ion-col class="ion-text-left"  routerDirection="forward">
+          <img src="assets/views/trukish2.jpg" />
+          <p>NAME : MIXED
+          </p>
+          <h6>trukish</h6>
+        </ion-col>
+      </ion-slide>
+    </ion-slides>
+  </div>
+</ion-content>
